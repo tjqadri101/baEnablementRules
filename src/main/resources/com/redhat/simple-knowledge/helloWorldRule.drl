@@ -1,9 +1,13 @@
-package com.redhat.simple;
+package com.redhat.simple-knowledge;
 
-rule "Hello World"
+rule "NoGreeting"
+	ruleflow-group "helloWorld"
+    when
+        //conditions
+        greeting : Greeting(greeting == null)
+    then
+        //actions
+        modify(greeting) {setGreeting("Hello World!")};
+        System.out.println("fired rule " + kcontext.getRule().getName());
 
-	when
-	
-	then
-		System.out.println("Talal's rules");
 end

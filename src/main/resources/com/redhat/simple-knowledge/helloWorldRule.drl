@@ -5,5 +5,5 @@ rule "Hello World"
 	when
 	
 	then
-		System.out.println("Hello Drools");
+		System.out.println("Talal's rules");
 end
